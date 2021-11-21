@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #e0e0e0;
+  color: #1d1d1d;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #100a1f;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+}
+
+.header label {
+  color: #e0e0e0;
+  margin-right: 1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 100px auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.container .movie {
+  text-align: center;
+}
+
+.container .movie .title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.container .movie .poster {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.pagination {
+  position: fixed;
+  bottom: 0;
+  background: #100a1f;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.pagination p {
+  color: #fff;
+}
+
+.pagination button,
+header button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #241744;
+  color: #fff;
+  border-radius: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+}
+
+.pagination button {
+  height: 40px;
+  width: 150px;
+}
+
+header button {
+  height: 30px;
+  width: 80px;
+  margin-left: 10px;
+}
+
+.pagination button:hover,
+header button:hover {
+  background: #137c32;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    justify-content: space-between;
+    flex-direction: column;
+    height: 120px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    justify-content: center;
+    flex-direction: row;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
