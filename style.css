@@ -25,6 +25,17 @@ body {
   margin-right: 1rem;
 }
 
+.input-search {
+  padding: 0.4rem;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
 .container {
   width: 90%;
   max-width: 1000px;
