@@ -7,6 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
       rel="stylesheet"
     />
@@ -53,11 +59,36 @@
 
   <body>
     <header class="header">
-      <label for="search">Buscar Película: </label>
-      <input type="search" name="search" id="search" size="40" />
+      <label for="search">Busca tú Película: </label>
+      <input
+        type="search"
+        name="search"
+        id="search"
+        size="40"
+        class="search-input"
+      />
       <button id="btnSearch">Buscar</button>
     </header>
     <div class="container" id="container"></div>
+    <template id="detail-movie">
+      <div class="container-detail-movie">
+        <div class="container-image">
+          <img class="img-movie" />
+        </div>
+        <div class="container-description-movie">
+          <button class="close">
+            <i class="fas fa-window-close"></i>
+          </button>
+          <h2 class="title"></h2>
+          <p class="release-date"></p>
+          <p class="vote-average"></p>
+          <ul class="listGenres"></ul>
+          <p class="description"></p>
+          <a class="home-page"></a>
+          <img class="img-back-movie" />
+        </div>
+      </div>
+    </template>
 
     <div class="pagination">
       <button id="btnPrevious">anterior</button>
