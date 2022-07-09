@@ -10,6 +10,13 @@ const containerMovie = document.querySelector(".movie");
 const templateDetailMovie = document.getElementById("detail-movie").content;
 const fragment = document.createDocumentFragment();
 
+const scrollToTop = () => {
+  //ir al top de la ventana
+  window.scrollTo({
+    top: 0,
+  });
+};
+
 const getMovies = async () => {
   numberPage.innerHTML = page;
   try {
@@ -89,11 +96,7 @@ const searchMovie = async (movieName) => {
 };
 
 const getDetailMovie = async (idMovie) => {
-  //ir al top de la ventana
-  window.scrollTo({
-    top: 0,
-  });
-
+  scrollToTop();
   //interación con API
   try {
     const response = await fetch(
@@ -175,6 +178,7 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target === btnNext) {
+    scrollToTop();
     if (page < 500) {
       page += 1;
       getMovies();
@@ -183,6 +187,7 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target === btnPrevious) {
+    scrollToTop();
     if (page > 1) {
       page -= 1;
       getMovies();
