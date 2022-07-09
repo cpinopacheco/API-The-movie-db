@@ -89,6 +89,12 @@ const searchMovie = async (movieName) => {
 };
 
 const getDetailMovie = async (idMovie) => {
+  //ir al top de la ventana
+  window.scrollTo({
+    top: 0,
+  });
+
+  //interación con API
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/movie/${idMovie}?api_key=06834f1a4c0114b44b173e57990084cf&language=es-MX`

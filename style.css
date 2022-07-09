@@ -40,21 +40,24 @@ body {
   width: 90%;
   max-width: 1000px;
   margin: 40px auto 100px auto;
-
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 20px;
 }
 
 .container .movie {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
 .container .movie .title {
   font-size: 16px;
   font-weight: 600;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  text-align: center;
 }
 
 .container .movie .poster {
